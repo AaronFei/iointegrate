@@ -46,7 +46,6 @@ func CreateIntegratedIoReader(bufferSize int) *IntegratedIoReader_t {
 
 	integratedIo.PipeReader = r
 	integratedIo.internalWriter = w
-	integratedIo.Uid = uuid.Must(uuid.NewRandom())
 	integratedIo.readerList = map[uuid.UUID]io.Reader{}
 	integratedIo.isReadCollectExist = false
 	integratedIo.bufferSize = bufferSize
@@ -61,7 +60,6 @@ func CreateIntegratedIoWriter(bufferSize int) *IntegratedIoWriter_t {
 
 	integratedIo.internalReader = r
 	integratedIo.PipeWriter = w
-	integratedIo.Uid = uuid.Must(uuid.NewRandom())
 	integratedIo.writerList = map[uuid.UUID]io.Writer{}
 	integratedIo.isWriteBroadCastExist = false
 	integratedIo.bufferSize = bufferSize
