@@ -1,4 +1,4 @@
-package ioIntegrated
+package ioIntegrate
 
 import (
 	"io"
