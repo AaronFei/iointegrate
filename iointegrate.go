@@ -22,7 +22,6 @@ import (
  */
 
 type IntegratedIoReader_t struct {
-	Uid                uuid.UUID
 	PipeReader         *io.PipeReader
 	internalWriter     *io.PipeWriter
 	readerList         map[uuid.UUID]io.Reader
@@ -32,7 +31,6 @@ type IntegratedIoReader_t struct {
 }
 
 type IntegratedIoWriter_t struct {
-	Uid                   uuid.UUID
 	internalReader        *io.PipeReader
 	PipeWriter            *io.PipeWriter
 	writerList            map[uuid.UUID]io.Writer
